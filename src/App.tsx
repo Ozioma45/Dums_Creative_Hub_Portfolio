@@ -4,6 +4,7 @@ import { Brands } from "./components/sections/Brands";
 import { Hero } from "./components/sections/Hero";
 import { Pricing } from "./components/sections/Pricing";
 import { Services } from "./components/sections/Services";
+import { CTA } from "./components/sections/CallToAction";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Services />
       <AboutUs />
       <Pricing />
+      <CTA />
     </Layout>
   );
 }
