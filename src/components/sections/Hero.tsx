@@ -1,7 +1,8 @@
 import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
 import { Button } from "../shared/Button";
-import { Numbers } from "./Numbers"; // Assuming this is correct
+import { Numbers } from "./Numbers";
+import { FaArrowRight } from "react-icons/fa";
 
 export const Hero = () => {
   return (
@@ -18,9 +19,9 @@ export const Hero = () => {
 
         <div
           className="relative flex flex-col items-center text-center lg:text-left lg:py-8 lg:items-center
-                        lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2"
+                        lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-5xl"
         >
-          <h1 className="text-heading-1 text-4xl sm:text-5xl md:text-5xl font-extrabold leading-tight text-center">
+          <h1 className="text-heading-1 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-center">
             Visual storytelling that
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600 ml-2 design-font">
               captivates
@@ -39,19 +40,25 @@ export const Hero = () => {
               <span className="relative z-[5]">Get Started</span>
             </Button>
             <Button className="min-w-max text-white">
-              <span className="relative z-[5]">View My Works</span>
+              <span className="relative z-[5] flex justify-center items-center">
+                View My Works
+                <FaArrowRight className="w-4 h-4 ml-3" />
+              </span>
             </Button>
           </div>
         </div>
 
-        <div className="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
-          <img
-            src="https://images.pexels.com/photos/7773731/pexels-photo-7773731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            alt="Hero image"
-            width={2350}
-            height={2359}
-            className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96"
-          />
+        <div
+          className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg 
+                max-w-2xl sm:max-w-3xl lg:max-w-3xl xl:max-w-4xl mx-auto"
+        >
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            title="YouTube Video"
+            allow="presentation; fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            src="https://www.youtube.com/embed/0lPGwbfKjBc?iv_load_policy=3&rel=0&modestbranding=1&playsinline=1&autoplay=1&loop=1&playlist=0lPGwbfKjBc&color=white"
+            frameBorder="0"
+          ></iframe>
         </div>
       </Container>
       <Numbers />
