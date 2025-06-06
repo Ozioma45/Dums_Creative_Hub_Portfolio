@@ -8,13 +8,13 @@ import { CTA } from "./components/sections/CallToAction";
 
 function App() {
   return (
-    <Layout title="EdgeAi">
+    <Layout title="Dums Voice">
       <Hero />
-      <Brands />
+      {/*<Brands />
       <Services />
       <AboutUs />
       <Pricing />
-      <CTA />
+      <CTA />*/}
     </Layout>
   );
 }

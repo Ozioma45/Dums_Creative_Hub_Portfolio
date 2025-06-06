@@ -49,7 +49,7 @@ export const Navbar = () => {
                             lg:pb-0 border-b border-box-border lg:border-0
                             px-6 lg:px-0"
             >
-              <BtnLink text="Get Started" href="#cta" className="" />
+              <BtnLink text="Let's Collaborate" href="#cta" className="" />
             </div>
           </div>
 
