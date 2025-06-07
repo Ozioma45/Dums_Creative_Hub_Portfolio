@@ -1,31 +1,49 @@
 import { Container } from "../shared/Container";
-import { Title } from "../shared/Title";
 
-const logos = ["discord", "openai", "paypal", "slack", "spotify", "youtube"];
+const icons = [
+  { src: "ai", name: "Adobe Illustrator" },
+  { src: "ps", name: "Photoshop" },
+  { src: "pre", name: "Adobe Premier pro" },
+  { src: "After", name: "After Effect" },
+  { src: "aud", name: "Adobe Audition" },
+  { src: "cap", name: "Capcut" },
+];
 
 export const Brands = () => {
+  // Duplicate icons to create seamless infinite scroll effect
+  const repeatedIcons = [...icons, ...icons];
+
   return (
-    <section>
-      {" "}
-      <Container className="space-y-8">
+    <section className="overflow-hidden relative w-full max-w-2xl sm:max-w-3xl lg:max-w-3xl xl:max-w-4xl mx-auto">
+      <Container className="space-y-5">
         <div className="text-center max-w-3xl mx-auto">
-          <Title> Trusted by Industry Leaders </Title>
+          <p className="text-xl text-white text-heading-2">Tools</p>
         </div>
-        <div className="flex justify-center flex-wrap gap-4">
-          {logos.map((logo, key) => (
-            <div
-              key={key}
-              className="p-4 sm:p-5 rounded-xl bg-body border border-box-border group"
-            >
-              <img
-                src={`src/assets/logos/${logo}.png`}
-                width="100"
-                height="60"
-                alt={logo}
-                className="h-7 sm:h-10 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105"
-              />
-            </div>
-          ))}
+
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-[rgb(var(--color-bg))] via-[rgb(var(--color-bg))]/80 to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-[rgb(var(--color-bg))] via-[rgb(var(--color-bg))]/80 to-transparent z-10" />
+
+        {/* Carousel wrapper */}
+        <div className="relative w-full">
+          <div className="group flex animate-scroll gap-4 w-max">
+            {repeatedIcons.map((tool, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-3 p-4 sm:p-5 rounded-xl bg-body border border-box-border group-hover:animate-none transform transition-transform duration-300 hover:scale-105 min-w-[200px]"
+              >
+                <img
+                  src={`src/assets/icons/${tool.src}.png`}
+                  width="100"
+                  height="60"
+                  alt={tool.name}
+                  className="h-7 sm:h-10 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105"
+                />
+                <span className="text-sm sm:text-base font-medium text-white text-heading-2">
+                  {tool.name}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
     </section>

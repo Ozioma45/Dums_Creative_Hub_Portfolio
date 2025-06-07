@@ -10,8 +10,8 @@ function App() {
   return (
     <Layout title="Dums Voice">
       <Hero />
-      {/*<Brands />
-      <Services />
+      <Brands />
+      {/*<Services />
       <AboutUs />
       <Pricing />
       <CTA />*/}

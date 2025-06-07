@@ -1,7 +1,6 @@
 import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
 import { Button } from "../shared/Button";
-import { Numbers } from "./Numbers";
 import { FaArrowRight } from "react-icons/fa";
 
 export const Hero = () => {
@@ -35,15 +34,14 @@ export const Hero = () => {
           <Paragraph className="mt-4 text-center bg">
             Get Irresistible Engagement on your videos with High-Quality Edits.
           </Paragraph>
-          <div className="mt-10 w-full flex max-w-md mx-auto lg:mx-0 justify-center gap-10 lg:gap-12">
-            <Button className="min-w-max text-white">
+          <div className="mt-10 w-full flex flex-col sm:flex-row items-center justify-center lg:justify-center gap-4 sm:gap-6 lg:gap-8 max-w-md sm:max-w-xl mx-auto lg:mx-0">
+            <Button className="min-w-[150px] px-6 py-3 text-white text-sm sm:text-base font-semibold bg-gradient-to-r from-blue-600 to-violet-600 hover:opacity-90 rounded-xl shadow-lg transition-all duration-300 ease-in-out">
               <span className="relative z-[5]">Get Started</span>
             </Button>
-            <Button className="min-w-max text-white">
-              <span className="relative z-[5] flex justify-center items-center">
-                View My Works
-                <FaArrowRight className="w-4 h-4 ml-3" />
-              </span>
+
+            <Button className="min-w-[150px] px-6 py-3 text-white text-sm sm:text-base font-semibold border border-white/20 hover:border-white/50 rounded-xl flex items-center justify-center gap-2 group transition-all duration-300 ease-in-out">
+              <span className="relative z-[5]">View My Works</span>
+              <FaArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
           </div>
         </div>
@@ -61,7 +59,6 @@ export const Hero = () => {
           ></iframe>
         </div>
       </Container>
-      <Numbers />
     </section>
   );
 };
