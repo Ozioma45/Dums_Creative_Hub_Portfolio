@@ -19,7 +19,7 @@
   --heading-3: 55 65 81;
   --blackWhite: 0 0 0;
   --borderColor: 200 200 200;
-  --titlebg: 200 200 200;
+  --titlebg: 255 255 255;
   --title: 0 0 0;
   --titlePara: 51 51 51;
 }
@@ -33,7 +33,7 @@ html.dark {
   --heading-2: 243 244 246;
   --heading-3: 209 213 219;
   --blackWhite: 255 255 255;
-  --titlebg: 68, 75, 90;
+  --titlebg: 17 24 39;
   --title: 255 255 255;
   --titlePara: 204 204 204;
   --borderColor: 68, 75, 90;

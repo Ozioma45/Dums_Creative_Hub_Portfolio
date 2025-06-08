@@ -1,8 +1,8 @@
 import { Layout } from "./components/Layout";
 import { Brands } from "./components/sections/Brands";
 import { Hero } from "./components/sections/Hero";
-import { Pricing } from "./components/sections/Pricing";
-import { CTA } from "./components/sections/CallToAction";
+import { MotionGraphics } from "./components/sections/MotionGraphics";
+import { ShortVideos } from "./components/sections/ShortVideos";
 import { Quote } from "./components/sections/Quote";
 import { VideoGallery } from "./components/sections/LVideos";
 
@@ -13,6 +13,8 @@ function App() {
       <Brands />
       <Quote />
       <VideoGallery />
+      <MotionGraphics />
+      <ShortVideos />
       {/*<AboutUs />
       <Pricing />
       <CTA />*/}
