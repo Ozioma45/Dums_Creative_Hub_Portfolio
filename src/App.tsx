@@ -5,6 +5,7 @@ import { MotionGraphics } from "./components/sections/MotionGraphics";
 import { ShortVideos } from "./components/sections/ShortVideos";
 import { Quote } from "./components/sections/Quote";
 import { VideoGallery } from "./components/sections/LVideos";
+import { TQuote } from "./components/sections/Tquote";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <VideoGallery />
       <MotionGraphics />
       <ShortVideos />
+      <TQuote />
       {/*<AboutUs />
       <Pricing />
       <CTA />*/}

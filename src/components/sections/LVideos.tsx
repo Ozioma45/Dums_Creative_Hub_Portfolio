@@ -3,6 +3,8 @@ import { VideoCard } from "../cards/VideoCard";
 import { Container } from "../shared/Container";
 import { Title } from "../shared/Title";
 
+import { VideoCardWithThumbnail } from "../cards/VideoCardThumbnails";
+
 export const VideoGallery = () => {
   return (
     <section id="videos ">
@@ -13,7 +15,11 @@ export const VideoGallery = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {longVideos.map((video, index) => (
-            <VideoCard key={index} title={video.title} url={video.url} />
+            <VideoCardWithThumbnail
+              key={index}
+              title={video.title}
+              videoId={video.videoId}
+            />
           ))}
         </div>
       </Container>

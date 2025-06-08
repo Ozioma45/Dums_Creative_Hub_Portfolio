@@ -1,4 +1,5 @@
 import { motionGraphics } from "../../utils/videos-data";
+import { VideoCardWithThumbnail } from "../cards/VideoCardThumbnails";
 import { VideoCard } from "../cards/VideoCard";
 import { Container } from "../shared/Container";
 import { Title } from "../shared/Title";
@@ -17,7 +18,11 @@ export const MotionGraphics = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {motionGraphics.map((video, index) => (
-            <VideoCard key={index} title={video.title} url={video.url} />
+            <VideoCardWithThumbnail
+              key={index}
+              title={video.title}
+              videoId={video.videoId}
+            />
           ))}
         </div>
       </Container>
