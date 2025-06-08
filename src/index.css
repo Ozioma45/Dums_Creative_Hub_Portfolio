@@ -17,6 +17,11 @@
   --heading-1: 23 37 84;
   --heading-2: 31 41 55;
   --heading-3: 55 65 81;
+  --blackWhite: 0 0 0;
+  --borderColor: 200 200 200;
+  --titlebg: 200 200 200;
+  --title: 0 0 0;
+  --titlePara: 51 51 51;
 }
 
 html.dark {
@@ -27,6 +32,11 @@ html.dark {
   --heading-1: 255 255 255;
   --heading-2: 243 244 246;
   --heading-3: 209 213 219;
+  --blackWhite: 255 255 255;
+  --titlebg: 68, 75, 90;
+  --title: 255 255 255;
+  --titlePara: 204 204 204;
+  --borderColor: 68, 75, 90;
 }
 
 @layer utilities {
@@ -46,8 +56,28 @@ html.dark {
     color: rgb(var(--heading-3));
   }
 
+  .blackWhite {
+    color: rgb(var(--blackWhite));
+  }
+
+  .title {
+    color: rgb(var(--title));
+  }
+
+  .titlePara {
+    color: rgb(var(--titlePara));
+  }
+
   .design-font {
     font-family: "Awesome Serif Italic VAR Variable";
+  }
+
+  .borderColor {
+    border-color: rgb(var(--borderColor));
+  }
+
+  .titleBg {
+    background-color: rgb(var(--titlebg));
   }
 
   @keyframes scroll {
@@ -73,5 +103,5 @@ html {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "inter", sans-serif;
 }

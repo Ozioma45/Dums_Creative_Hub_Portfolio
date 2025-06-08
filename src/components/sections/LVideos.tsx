@@ -1,0 +1,26 @@
+import { longVideos } from "../../utils/videos-data";
+import { VideoCard } from "../cards/VideoCard";
+import { Container } from "../shared/Container";
+import { Title } from "../shared/Title";
+import { Paragraph } from "../shared/Paragraph";
+
+export const VideoGallery = () => {
+  return (
+    <section id="videos ">
+      <Container className="space-y-8 md:space-y-10 mt-20">
+        <div className="text-center titleBg w-full p-5 rounded-lg md:text-start">
+          <Title>Long Form</Title>
+          <Paragraph>
+            Check out our curated collection of engaging YouTube content.
+          </Paragraph>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {longVideos.map((video, index) => (
+            <VideoCard key={index} title={video.title} url={video.url} />
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+};

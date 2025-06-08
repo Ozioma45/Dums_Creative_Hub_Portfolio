@@ -10,6 +10,9 @@ module.exports = {
           "100%": { transform: "translateX(-50%)" },
         },
       },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
     },
   },
 };
