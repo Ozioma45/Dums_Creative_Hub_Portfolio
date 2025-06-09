@@ -6,7 +6,7 @@ export const AboutMe = () => {
     <ScrollReveal direction="up" delay={0.7}>
       <AboutMeCard
         imageSrc="/comp.png"
-        name="Vic"
+        name="Dumebi Okoye"
         title="Video editor, content strategist"
         description="I help coaches and businesses boost their brands’ views and engagement with my storytelling edits."
         buttonText="Book a call"
