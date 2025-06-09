@@ -1,15 +1,7 @@
 import { Container } from "../shared/Container";
 import logo from "../../assets/logos/Dums-Logo-(-YT).png";
-import { NavItem } from "../shared/NavItem";
 import { BtnLink } from "../shared/BtnLinks";
 import { useThemeStore } from "../../store/ThemeStore";
-
-export const navItems = [
-  { href: "#", text: "Home" },
-  { href: "#services", text: "Services" },
-  { href: "#about-us", text: "About Us" },
-  { href: "#pricing", text: "Pricing" },
-];
 
 export const Navbar = () => {
   const { toggleTheme, theme } = useThemeStore();

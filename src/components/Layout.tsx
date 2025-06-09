@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-//import { Footer } from "./elements/Footer";
+import { Footer } from "./elements/Footer";
 import { Navbar } from "./elements/Navbar";
 
 interface LayoutProps {
@@ -19,7 +19,7 @@ export const Layout = ({ title, children }: LayoutProps) => {
         {children}
       </main>
 
-      {/*<Footer />*/}
+      <Footer />
     </>
   );
 };
