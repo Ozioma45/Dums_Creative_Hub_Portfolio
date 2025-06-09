@@ -1,54 +1,106 @@
-# React + TypeScript + Vite
+# Dums Creative Hub 🎬✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dums Creative Hub is a clean, minimal, and modern one-page portfolio website built for a professional video editor. The design emphasizes creativity, user experience, and performance. Built using React and Tailwind CSS, the site includes a responsive design, light/dark theme toggle, auto-scrolling testimonial carousel, and smooth animations with Framer Motion.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[🔗 Visit Live Site](https://dums-creative-hub-portfolio.vercel.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📸 Screenshots
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 💡 Light Mode
+
+![Light Mode](./screenshots/light-mode.png)
+
+### 🌙 Dark Mode
+
+![Dark Mode](./screenshots/dark-mode.png)
+
+---
+
+## 🚀 Features
+
+- 🌓 Light & Dark Theme Toggle
+- 🎥 Video Intro Section
+- 🖼️ Auto-scrolling Testimonials Carousel
+- 🎨 Filterable Work Gallery (Long Form, Short Form, Animation)
+- 🗣️ Smooth Client Testimonials with Drag or Auto-scroll
+- 📱 Fully Responsive (Mobile-first)
+- ✨ Framer Motion Animations
+- 🔗 Social Media Footer Icons
+- 👤 Modern About Me Card with Custom Shadow & Gradient
+
+---
+
+## ⚙️ Technologies Used
+
+- [React.js](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Vite](https://vitejs.dev/)
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js (v18+)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Ozioma45/Dums_Creative_Hub_Portfolio.git
+
+# Navigate into the project
+cd Dums_Creative_Hub_Portfolio
+
+# Install dependencies
+npm install
+# or
+yarn install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Run Locally
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+---
+
+## 🔗 Socials
+
+Follow and connect with **Dums Creative Hub** on:
+
+- [Instagram](https://instagram.com/dums_creativehub)
+- [YouTube](https://youtube.com/@dumscreativehub)
+- [TikTok](https://tiktok.com/@dums_creativehub)
+
+---
+
+## ✍️ Author
+
+**Built & Designed by [Ozioma John Egole](https://github.com/ozioma45)**
+© 2025 Dums Creative Hub
+
+> _“Creating for the future of video.”_
+
+---
+
+## 📌 License
+
+This project is licensed for personal and commercial portfolio use. Attribution is appreciated.
+
+```
+
 ```

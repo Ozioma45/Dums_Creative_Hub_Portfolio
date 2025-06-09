@@ -36,7 +36,7 @@ export const Brands = () => {
                     className="ease-linear duration-300 grayscale hover:grayscale-0 hover:scale-105 flex items-center gap-3 p-4 sm:p-5 rounded-xl bg-body border border-box-border transform transition-transform duration-300 hover:scale-105 min-w-[200px]"
                   >
                     <img
-                      src={`src/assets/icons/${tool.src}.png`}
+                      src={`/icons/${tool.src}.png`}
                       width="100"
                       height="60"
                       alt={tool.name}
