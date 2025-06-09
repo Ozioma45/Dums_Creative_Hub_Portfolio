@@ -12,6 +12,9 @@ module.exports = {
         boxShadow: {
           "box-shadow": "0 10px 20px rgba(0, 0, 0, 0.2)",
         },
+        transitionProperty: {
+          scale: "transform",
+        },
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

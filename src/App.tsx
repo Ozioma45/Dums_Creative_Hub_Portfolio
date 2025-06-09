@@ -7,6 +7,8 @@ import { Quote } from "./components/sections/Quote";
 import { VideoGallery } from "./components/sections/LVideos";
 import { TQuote } from "./components/sections/TQuote";
 import { TestimonialSection } from "./components/sections/Testimonial";
+import { FaqSection } from "./components/sections/Faq";
+import { AboutMe } from "./components/sections/AboutUs";
 
 function App() {
   return (
@@ -19,8 +21,8 @@ function App() {
       <ShortVideos />
       <TQuote />
       <TestimonialSection />
-      {/*<Pricing />
-      <CTA />*/}
+      <FaqSection />
+      <AboutMe />
     </Layout>
   );
 }
