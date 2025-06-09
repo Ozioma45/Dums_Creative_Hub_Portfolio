@@ -1,6 +1,5 @@
 import { motionGraphics } from "../../utils/videos-data";
 import { VideoCardWithThumbnail } from "../cards/VideoCardThumbnails";
-import { VideoCard } from "../cards/VideoCard";
 import { Container } from "../shared/Container";
 import { Title } from "../shared/Title";
 //import { Paragraph } from "../shared/Paragraph";

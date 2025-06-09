@@ -1,5 +1,4 @@
 import { longVideos } from "../../utils/videos-data";
-import { VideoCard } from "../cards/VideoCard";
 import { Container } from "../shared/Container";
 import { Title } from "../shared/Title";
 

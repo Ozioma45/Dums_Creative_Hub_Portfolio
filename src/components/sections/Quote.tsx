@@ -1,7 +1,4 @@
 import { Container } from "../shared/Container";
-import { Paragraph } from "../shared/Paragraph";
-import { Button } from "../shared/Button";
-import { FaArrowRight } from "react-icons/fa";
 
 export const Quote = () => {
   return (

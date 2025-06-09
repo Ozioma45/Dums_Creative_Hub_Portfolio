@@ -90,7 +90,7 @@ html.dark {
   }
 
   .animate-scroll {
-    animation: scroll 15s linear infinite;
+    animation: scroll 25s linear infinite;
   }
 
   .group:hover .animate-scroll {
@@ -104,4 +104,12 @@ html {
 
 body {
   font-family: "inter", sans-serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
