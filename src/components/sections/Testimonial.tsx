@@ -17,8 +17,8 @@ export const TestimonialSection = () => {
           {/* Carousel container with faded edges */}
           <div className="relative w-full overflow-hidden rounded-2xl bg-body py-10">
             {/* Faded Edges */}
-            <div className="pointer-events-none absolute left-0 top-0 h-full w-10 lg:w-20 bg-gradient-to-r from-[rgb(var(--color-bg))] via-[rgb(var(--color-bg))]/50 to-transparent z-10" />
-            <div className="pointer-events-none absolute right-0 top-0 h-full w-10 lg:w-20 bg-gradient-to-l from-[rgb(var(--color-bg))] via-[rgb(var(--color-bg))]/50 to-transparent z-10" />
+            <div className="pointer-events-none absolute left-0 top-0 h-full w-6 lg:w-20 bg-gradient-to-r from-[rgb(var(--color-bg))] via-[rgb(var(--color-bg))]/50 to-transparent z-10" />
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-6 lg:w-20 bg-gradient-to-l from-[rgb(var(--color-bg))] via-[rgb(var(--color-bg))]/50 to-transparent z-10" />
 
             {/* Scrolling carousel */}
             <div className="group overflow-hidden">
