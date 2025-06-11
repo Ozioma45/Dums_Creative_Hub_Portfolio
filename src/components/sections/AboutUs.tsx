@@ -10,7 +10,7 @@ export const AboutMe = () => {
         title="Video editor, content strategist"
         description="I help coaches and businesses boost their brands’ views and engagement with my storytelling edits."
         buttonText="Book a call"
-        buttonLink="https://calendly.com/yourlink"
+        buttonLink="https://wa.me/+23408132698614"
       />
     </ScrollReveal>
   );
