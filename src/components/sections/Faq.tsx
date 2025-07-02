@@ -1,8 +1,24 @@
 import { ScrollReveal } from "../../libs/ScrollReveal";
-import { faqs } from "../../utils/Faq-data";
+//import { faqs } from "../../utils/Faq-data";
 import { FaqCard } from "../cards/FaqCards";
 
+import { useEffect, useState } from "react";
+import { client } from "../../libs/sanityClient";
+import { FAQ_QUERY } from "../../libs/queries";
+
+interface FAQ {
+  _id: string;
+  question: string;
+  answer: string;
+}
+
 export const FaqSection = () => {
+  const [faqs, setFaqs] = useState<FAQ[]>([]);
+
+  useEffect(() => {
+    client.fetch(FAQ_QUERY).then((data) => setFaqs(data));
+  }, []);
+
   return (
     <ScrollReveal direction="up" delay={0.5}>
       <section className=" py-16 px-4">
@@ -19,8 +35,12 @@ export const FaqSection = () => {
 
           {/* Right Side: FAQs */}
           <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <FaqCard key={index} {...faq} />
+            {faqs.map((faq) => (
+              <FaqCard
+                key={faq._id}
+                question={faq.question}
+                answer={faq.answer}
+              />
             ))}
           </div>
         </div>
