@@ -39,7 +39,11 @@ export const Navbar = () => {
                             lg:pb-0 border-b border-box-border lg:border-0
                             px-6 lg:px-0"
             >
-              <BtnLink text="Let's Collaborate" href="#cta" className="" />
+              <BtnLink
+                text="Let's Collaborate"
+                href="https://wa.me/+23408132698614"
+                className=""
+              />
             </div>
           </div>
 

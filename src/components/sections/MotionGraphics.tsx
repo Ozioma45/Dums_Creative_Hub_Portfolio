@@ -25,7 +25,7 @@ export const MotionGraphics = () => {
 
   return (
     <ScrollReveal direction="up" delay={0.7}>
-      <section id="videos ">
+      <section id="M-videos">
         <Container className="space-y-8 md:space-y-10 mt-20">
           <div className="text-center titleBg w-full p-5 rounded-lg md:text-start shadow-lg">
             <Title>Motion Graphics</Title>
