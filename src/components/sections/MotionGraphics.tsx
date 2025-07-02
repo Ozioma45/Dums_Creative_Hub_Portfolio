@@ -1,5 +1,5 @@
 import { ScrollReveal } from "../../libs/ScrollReveal";
-import { motionGraphics } from "../../utils/videos-data";
+//import { motionGraphics } from "../../utils/videos-data";
 import { VideoCardWithThumbnail } from "../cards/VideoCardThumbnails";
 import { Container } from "../shared/Container";
 import { Title } from "../shared/Title";

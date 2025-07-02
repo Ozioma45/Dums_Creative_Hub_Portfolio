@@ -1,8 +1,25 @@
 import { ScrollReveal } from "../../libs/ScrollReveal";
-import { testimonials } from "../../utils/testimonials-data";
+//import { testimonials } from "../../utils/testimonials-data";
 import { TestimonialCard } from "../cards/TestimonialCard";
 
+import { useEffect, useState } from "react";
+import { client } from "../../libs/sanityClient";
+import { TESTIMONIALS_QUERY } from "../../libs/queries";
+
+interface Testimonial {
+  _id: string;
+  name: string;
+  message: string;
+  avatar: string;
+}
+
 export const TestimonialSection = () => {
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+
+  useEffect(() => {
+    client.fetch(TESTIMONIALS_QUERY).then((data) => setTestimonials(data));
+  }, []);
+
   const repeatedTestimonials = [...testimonials, ...testimonials]; // for infinite scroll
 
   return (
@@ -23,8 +40,8 @@ export const TestimonialSection = () => {
             {/* Scrolling carousel */}
             <div className="group overflow-hidden">
               <div className="flex animate-scroll gap-6 w-max px-4">
-                {repeatedTestimonials.map((testimonial, index) => (
-                  <TestimonialCard key={index} {...testimonial} />
+                {repeatedTestimonials.map((testimonial) => (
+                  <TestimonialCard key={testimonial._id} {...testimonial} />
                 ))}
               </div>
             </div>
