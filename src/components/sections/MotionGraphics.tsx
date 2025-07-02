@@ -5,7 +5,24 @@ import { Container } from "../shared/Container";
 import { Title } from "../shared/Title";
 //import { Paragraph } from "../shared/Paragraph";
 
+import { useEffect, useState } from "react";
+import { client } from "../../libs/sanityClient";
+
+// Define the expected shape of the video data
+interface Video {
+  title: string;
+  videoId: string;
+}
+
 export const MotionGraphics = () => {
+  const [videos, setVideos] = useState<Video[]>([]);
+
+  useEffect(() => {
+    client
+      .fetch(`*[_type == "video" && category == "motion"]{title, videoId}`)
+      .then((data: Video[]) => setVideos(data));
+  }, []);
+
   return (
     <ScrollReveal direction="up" delay={0.7}>
       <section id="videos ">
@@ -18,7 +35,7 @@ export const MotionGraphics = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {motionGraphics.map((video, index) => (
+            {videos.map((video, index) => (
               <VideoCardWithThumbnail
                 key={index}
                 title={video.title}
