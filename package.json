@@ -11,6 +11,8 @@
     "start": "PORT=3001 react-scripts start"
   },
   "dependencies": {
+    "@sanity/client": "^7.6.0",
+    "@sanity/image-url": "^1.1.0",
     "@tailwindcss/vite": "^4.1.8",
     "framer-motion": "^12.16.0",
     "lucide-react": "^0.513.0",

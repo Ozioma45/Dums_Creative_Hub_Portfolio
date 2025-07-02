@@ -2,8 +2,20 @@ import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
 import { Button } from "../shared/Button";
 import { FaArrowRight } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { client } from "../../libs/sanityClient";
 
 export const Hero = () => {
+  const [videoId, setVideoId] = useState("");
+
+  useEffect(() => {
+    client
+      .fetch(`*[_type == "heroVideo"][0]{ videoId }`)
+      .then((data) => setVideoId(data?.videoId));
+  }, []);
+
+  const embedUrl = `https://www.youtube.com/embed/${videoId}?iv_load_policy=3&rel=0&modestbranding=1&playsinline=1&autoplay=1&loop=1&playlist=${videoId}&color=white`;
+
   return (
     <section className="relative pt-30 lg:pt-36">
       <Container className="flex flex-col items-center justify-center text-center gap-10 lg:gap-12">
@@ -50,13 +62,15 @@ export const Hero = () => {
           className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg 
                 max-w-2xl sm:max-w-3xl lg:max-w-3xl xl:max-w-4xl mx-auto"
         >
-          <iframe
-            className="absolute top-0 left-0 w-full h-full"
-            title="YouTube Video"
-            allow="presentation; fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            src="https://www.youtube.com/embed/0lPGwbfKjBc?iv_load_policy=3&rel=0&modestbranding=1&playsinline=1&autoplay=1&loop=1&playlist=0lPGwbfKjBc&color=white"
-            frameBorder="0"
-          ></iframe>
+          {videoId && (
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              title="YouTube Video"
+              allow="presentation; fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              src={embedUrl}
+              frameBorder="0"
+            ></iframe>
+          )}
         </div>
       </Container>
     </section>
