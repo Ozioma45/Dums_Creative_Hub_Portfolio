@@ -10,3 +10,13 @@ export const FAQ_QUERY = `*[_type == "faq"] | order(_createdAt asc){
   question,
   answer
 }`;
+
+export const ABOUT_ME_QUERY = `*[_type == "aboutMe"][0]{
+  _id,
+  name,
+  title,
+  description,
+  buttonText,
+  buttonLink,
+  "imageUrl": image.asset->url
+}`;
