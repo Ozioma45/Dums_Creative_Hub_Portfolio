@@ -1,6 +1,6 @@
 # Dums Creative Hub 🎬✨
 
-Dums Creative Hub is a clean, minimal, and modern one-page portfolio website built for a professional video editor. The design emphasizes creativity, user experience, and performance. Built using React and Tailwind CSS, the site includes a responsive design, light/dark theme toggle, auto-scrolling testimonial carousel, and smooth animations with Framer Motion.
+Dums Creative Hub is a clean, minimal, and modern one-page portfolio website built for a professional video editor. The design emphasizes creativity, user experience, and performance. Built using React and Tailwind CSS, the site includes a responsive design, dynamic content powered by Sanity CMS, and smooth animations with Framer Motion.
 
 ## 🌐 Live Demo
 
@@ -23,14 +23,33 @@ Dums Creative Hub is a clean, minimal, and modern one-page portfolio website bui
 ## 🚀 Features
 
 - 🌓 Light & Dark Theme Toggle
-- 🎥 Video Intro Section
-- 🖼️ Auto-scrolling Testimonials Carousel
-- 🎨 Filterable Work Gallery (Long Form, Short Form, Animation)
-- 🗣️ Smooth Client Testimonials with Drag or Auto-scroll
-- 📱 Fully Responsive (Mobile-first)
+- 🎥 Video Intro Section powered by Sanity
+- 📁 Google Drive Button (fully editable via Sanity)
+- 🖼️ Auto-scrolling Testimonials Carousel (fetched from Sanity)
+- 🎨 Dynamic Work Gallery (Long Form, Short Form, Motion Graphics — all from Sanity)
+- 📋 Editable FAQs from Sanity CMS
+- 👤 “About Me” Section editable via Sanity
+- 🔗 Social Media Footer (Sanity-powered links and icons)
+- 💬 Smooth Client Testimonials with Drag or Auto-scroll
 - ✨ Framer Motion Animations
-- 🔗 Social Media Footer Icons
-- 👤 Modern About Me Card with Custom Shadow & Gradient
+- 📱 Fully Responsive (Mobile-first)
+
+---
+
+## 🧠 Powered by Headless CMS
+
+The portfolio is now fully integrated with [Sanity](https://www.sanity.io/) for real-time content management.  
+Clients or editors can easily update:
+
+- YouTube intro video
+- Long form, short form & motion graphics videos
+- FAQ content
+- About Me section
+- Testimonial cards
+- Google Drive button link
+- Social media profiles
+
+All changes update automatically — no code or redeploy needed.
 
 ---
 
@@ -40,6 +59,7 @@ Dums Creative Hub is a clean, minimal, and modern one-page portfolio website bui
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
+- [Sanity CMS](https://www.sanity.io/)
 - [Vite](https://vitejs.dev/)
 
 ---
@@ -52,6 +72,7 @@ Make sure you have the following installed:
 
 - Node.js (v18+)
 - npm or yarn
+- Sanity CLI (`npm install -g sanity`)
 
 ### Installation
 
@@ -62,18 +83,27 @@ git clone https://github.com/Ozioma45/Dums_Creative_Hub_Portfolio.git
 # Navigate into the project
 cd Dums_Creative_Hub_Portfolio
 
-# Install dependencies
+# Install frontend dependencies
 npm install
 # or
 yarn install
+
+# Go to the backend (CMS) folder
+cd backend-sanity
+npm install
+
+# Start the Sanity Studio locally
+sanity dev
 ```
 
-### Run Locally
+### Run Frontend Locally
 
 ```bash
+# Go back to frontend folder
+cd ..
+
+# Run the dev server
 npm run dev
-# or
-yarn dev
 ```
 
 ---
