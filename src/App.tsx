@@ -9,6 +9,7 @@ import { TQuote } from "./components/sections/TQuote";
 import { TestimonialSection } from "./components/sections/Testimonial";
 import { FaqSection } from "./components/sections/Faq";
 import { AboutMe } from "./components/sections/AboutUs";
+import { DriveLink } from "./components/sections/DriveLink";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <VideoGallery />
       <MotionGraphics />
       <ShortVideos />
+      <DriveLink />
       <TQuote />
       <TestimonialSection />
       <FaqSection />
