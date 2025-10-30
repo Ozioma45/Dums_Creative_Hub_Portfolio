@@ -32,7 +32,7 @@ Dums Creative Hub is a clean, minimal, and modern one-page portfolio website bui
 - 🔗 Social Media Footer (Sanity-powered links and icons)
 - 💬 Smooth Client Testimonials with Drag or Auto-scroll
 - ✨ Framer Motion Animations
-- 📱 Fully Responsive (Mobile-first)
+- 📱 Fully Responsive (Mobile-first).
 
 ---
 
